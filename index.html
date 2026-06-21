@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Father's Day ❤️</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+overflow-x:hidden;
+color:white;
+text-align:center;
+}
+
+.stars{
+position:fixed;
+width:100%;
+height:100%;
+overflow:hidden;
+z-index:-1;
+}
+
+.star{
+position:absolute;
+width:3px;
+height:3px;
+background:white;
+border-radius:50%;
+animation:twinkle 3s infinite;
+}
+
+@keyframes twinkle{
+0%,100%{opacity:.2;}
+50%{opacity:1;}
+}
+
+.container{
+padding:40px 20px;
+max-width:900px;
+margin:auto;
+}
+
+h1{
+font-size:3rem;
+margin-top:20px;
+animation:fadeDown 2s;
+}
+
+.subtitle{
+font-size:1.3rem;
+margin:20px 0;
+color:#ffe082;
+}
+
+.card{
+background:rgba(255,255,255,.12);
+backdrop-filter:blur(10px);
+padding:30px;
+border-radius:20px;
+margin-top:30px;
+box-shadow:0 0 20px rgba(255,255,255,.2);
+animation:fadeUp 2s;
+}
+
+.card p{
+font-size:1.2rem;
+line-height:1.8;
+}
+
+.signature{
+margin-top:30px;
+font-size:1.5rem;
+font-weight:bold;
+color:#FFD54F;
+}
+
+button{
+margin-top:30px;
+padding:15px 30px;
+font-size:18px;
+border:none;
+border-radius:30px;
+cursor:pointer;
+background:#FFD54F;
+color:#222;
+font-weight:bold;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.08);
+}
+
+#hiddenMessage{
+display:none;
+margin-top:25px;
+font-size:1.3rem;
+animation:fadeUp 1s;
+color:#fff176;
+}
+
+footer{
+margin:40px 0;
+font-size:1rem;
+color:#ddd;
+}
+
+@keyframes fadeDown{
+from{opacity:0;transform:translateY(-50px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+@keyframes fadeUp{
+from{opacity:0;transform:translateY(50px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+.heart{
+font-size:60px;
+animation:beat 1s infinite;
+display:inline-block;
+}
+
+@keyframes beat{
+0%,100%{transform:scale(1);}
+50%{transform:scale(1.2);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="stars" id="stars"></div>
+
+<div class="container">
+
+<div class="heart">❤️</div>
+
+<h1>Happy Father's Day</h1>
+
+<p class="subtitle">To the strongest man, my greatest inspiration, and my forever hero.</p>
+
+<div class="card">
+
+<p>
+Dear Papa,<br><br>
+
+Thank you for every sacrifice you've made, every lesson you've taught,
+and every dream you've helped me believe in.
+Your love, strength, patience, and guidance have shaped my life in countless ways.
+
+No matter how old I grow, I will always be your little girl,
+looking up to the man who taught me what kindness, courage,
+and unconditional love truly mean.
+
+You are my biggest blessing, my protector,
+my motivation, and my greatest pride.
+
+Happy Father's Day, Papa.
+I love you more than words can ever express. ❤️
+</p>
+
+<div class="signature">
+With endless love,<br>
+❤️ Sanskruti ❤️
+</div>
+
+<button onclick="showMessage()">
+Click for a Special Surprise
+</button>
+
+<div id="hiddenMessage">
+🌟 "A father's love is forever written in his daughter's heart." 🌟
+<br><br>
+Thank you for always believing in me.
+I am proud to be your daughter.
+❤️ Happy Father's Day Papa ❤️
+</div>
+
+</div>
+
+<footer>
+Made with infinite love by Sanskruti ❤️
+</footer>
+
+</div>
+
+<script>
+function showMessage(){
+document.getElementById("hiddenMessage").style.display="block";
+}
+
+for(let i=0;i<180;i++){
+let star=document.createElement("div");
+star.className="star";
+star.style.left=Math.random()*100+"%";
+star.style.top=Math.random()*100+"%";
+star.style.animationDelay=Math.random()*3+"s";
+document.getElementById("stars").appendChild(star);
+}
+</script>
+
+</body>
+  </html>
